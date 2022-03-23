@@ -1,0 +1,9 @@
+app:
+    name: 'word-of-wisdom'
+    version: '1.0.0'
+
+tcp:
+    port: '8080'
+
+log:
+    level: 'debug'

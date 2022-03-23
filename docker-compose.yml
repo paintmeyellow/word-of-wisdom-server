@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+    server:
+        container_name: server
+        build:
+            context: .
+            dockerfile: docker/server.Dockerfile
+        environment:
+            TCP_PORT: 4222
+
+    client:
+        container_name: client
+        build:
+            context: .
+            dockerfile: docker/client.Dockerfile
+        environment:
+            SERVER_ADDR: server:4222
